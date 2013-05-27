@@ -7,12 +7,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    statusBar()->showMessage("QSimulate has started");
 
 }
 void MainWindow::onNewGameClicked() {
     NewGameDialog * dialog = new NewGameDialog(this);
-    dialog->exec();
+    if(dialog->exec() == QDialog::Accepted){
+
+            if (dialog->getResult()==Ui::MEDIUM) {
+                statusBar()->showMessage("Nowa gra medium");
+            } else {
+                statusBar()->showMessage("Nowa gra ss");
+            }
+
+      //QString bar = dialog.getFoo();
+    }
 }
 
 MainWindow::~MainWindow()

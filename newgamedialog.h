@@ -4,6 +4,11 @@
 #include <QDialog>
 
 namespace Ui {
+enum Result {
+    EASY,
+    MEDIUM,
+    HARD
+};
 class NewGameDialog;
 }
 
@@ -13,10 +18,13 @@ class NewGameDialog : public QDialog
     
 public:
     explicit NewGameDialog(QWidget *parent = 0);
+    Ui::Result getResult();
     ~NewGameDialog();
-    
+public slots:
+    virtual void accept();
 private:
     Ui::NewGameDialog *ui;
+    Ui::Result result;
 };
 
 #endif // NEWGAMEDIALOG_H
