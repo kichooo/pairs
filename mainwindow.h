@@ -26,10 +26,9 @@ public slots:
     void onNewGameClicked();
     void onHelpClicked();
     void resetAllCards();
-    void changeCard(qint32 row, qint32 col,qint32 card);
+    void monitorState(qint32 moves, qint32 total, qint32 left);
 signals:
     void newGame(qint32 rows, qint32 cols);
-    void clickedCard(qint32 row, qint32 col);
 private:
     Ui::MainWindow *ui;
     GameModel model;

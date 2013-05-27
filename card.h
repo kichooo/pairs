@@ -14,10 +14,12 @@ class Card : public QAbstractButton
 public:
     explicit Card(qint32 row,qint32 col, QMap<qint32,QImage> map,QWidget *parent = 0);
     QSize sizeHint () const;
-    void setType(qint32 type);
+
 signals:
-    
+    void cardClicked(qint32 row,qint32 col);
 public slots:
+    void setType(qint32 row, qint32 col,qint32 type);
+    void wasClicked();
 protected:
     void paintEvent(QPaintEvent *e);
 private:

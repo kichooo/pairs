@@ -17,14 +17,17 @@ SOURCES += main.cpp\
     newgamedialog.cpp \
     helpdialog.cpp \
     gamemodel.cpp \
-    card.cpp
+    card.cpp \
+    victorydialog.cpp
 
 HEADERS  += mainwindow.h \
     newgamedialog.h \
     helpdialog.h \
     gamemodel.h \
-    card.h
+    card.h \
+    victorydialog.h
 
 FORMS    += mainwindow.ui \
     newgamedialog.ui \
-    helpdialog.ui
+    helpdialog.ui \
+    victorydialog.ui
