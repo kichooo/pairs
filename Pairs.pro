@@ -14,10 +14,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    newgamedialog.cpp
+    newgamedialog.cpp \
+    helpdialog.cpp \
+    gamemodel.cpp \
+    card.cpp
 
 HEADERS  += mainwindow.h \
-    newgamedialog.h
+    newgamedialog.h \
+    helpdialog.h \
+    gamemodel.h \
+    card.h
 
 FORMS    += mainwindow.ui \
-    newgamedialog.ui
+    newgamedialog.ui \
+    helpdialog.ui
